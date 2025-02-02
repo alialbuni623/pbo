@@ -1,14 +1,14 @@
 from django.db import models
 
 class Activity(models.Model):
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='health_activities')
     date = models.DateField()
     steps = models.IntegerField()
     distance = models.FloatField()
     calories_burned = models.FloatField()
 
 class FoodIntake(models.Model):
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE, related_name='health_food_intakes')
     date = models.DateField()
     food_item = models.CharField(max_length=100)
     calories = models.FloatField()

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Health Data - Health Monitoring System</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>View Health Data</h1>
+    <h2>Physical Activity</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Steps</th>
+            <th>Distance (km)</th>
+            <th>Calories Burned</th>
+        </tr>
+        {% for activity in activities %}
+        <tr>
+            <td>{{ activity.date }}</td>
+            <td>{{ activity.steps }}</td>
+            <td>{{ activity.distance }}</td>
+            <td>{{ activity.calories_burned }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Food Intake</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Food Item</th>
+            <th>Calories</th>
+        </tr>
+        {% for food in foods %}
+        <tr>
+            <td>{{ food.date }}</td>
+            <td>{{ food.food_item }}</td>
+            <td>{{ food.calories }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Vital Signs</h2>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Blood Pressure</th>
+            <th>Blood Sugar</th>
+            <th>Weight (kg)</th>
+        </tr>
+        {% for vitals in vitals %}
+        <tr>
+            <td>{{ vitals.date }}</td>
+            <td>{{ vitals.blood_pressure }}</td>
+            <td>{{ vitals.blood_sugar }}</td>
+            <td>{{ vitals.weight }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

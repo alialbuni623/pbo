@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import FoodIntake, Activity
 
-# Register your models here.
+admin.site.register(FoodIntake)
+admin.site.register(Activity)
