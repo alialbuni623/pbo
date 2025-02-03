@@ -14,21 +14,25 @@
 
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fb;
+            color: #444;
             line-height: 1.6;
+            padding: 0 20px;
         }
 
         header {
-            background-color: #007bff;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
             text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
         nav ul {
@@ -37,36 +41,44 @@
         }
 
         nav ul li {
-            display: inline;
-            margin-right: 20px;
+            display: inline-block;
+            margin-right: 30px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 1.1rem;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #ffd700;
         }
 
         /* Main content */
         main {
-            padding: 20px;
+            padding: 40px 0;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         section {
             margin-bottom: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #333;
+            margin-bottom: 15px;
         }
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #444;
             margin-top: 20px;
         }
@@ -74,10 +86,12 @@
         ul {
             list-style: disc;
             margin-left: 20px;
+            font-size: 1.1rem;
         }
 
         ul li {
             margin-bottom: 10px;
+            line-height: 1.8;
         }
 
         /* Footer */
@@ -85,13 +99,19 @@
             text-align: center;
             background-color: #333;
             color: white;
-            padding: 10px;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-radius: 8px;
         }
 
-        /* Responsive */
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             nav ul li {
@@ -100,8 +120,38 @@
             }
 
             section {
-                margin-bottom: 20px;
+                margin-bottom: 30px;
+                padding: 20px;
             }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            ul {
+                font-size: 1rem;
+            }
+        }
+
+        /* Buttons */
+        .cta-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -120,7 +170,8 @@
     <main>
         <section id="home">
             <h2>Selamat datang di Aplikasi Pemantauan Kesehatan</h2>
-            <p>Dengan aplikasi ini, Anda dapat memantau kesehatan Anda secara lebih efektif.</p>
+            <p>Dengan aplikasi ini, Anda dapat memantau kesehatan Anda secara lebih efektif dan memperoleh informasi penting terkait gaya hidup sehat.</p>
+            <a href="#fitur" class="cta-button">Pelajari Fitur Kami</a>
         </section>
 
         <section id="fitur">
@@ -148,12 +199,12 @@
 
         <section id="kontak">
             <h2>Kontak Kami</h2>
-            <p>Untuk informasi lebih lanjut, hubungi kami di email: support@healthmonitor.com</p>
+            <p>Untuk informasi lebih lanjut, hubungi kami di email: <a href="mailto:alialbuni623@gmail.com.com" style="color: #4CAF50;">alialbuni623@gmail.com</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; Dokter Ali Albuni.</p>
+        <p>&copy; 2025 Dokter Ali Albuni. Semua hak cipta dilindungi.</p>
     </footer>
 </body>
 </html>
